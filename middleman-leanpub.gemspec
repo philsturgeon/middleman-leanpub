@@ -11,6 +11,7 @@ Gem::Specification.new do |s|
   s.summary     = %q{Grab data for LeanPub Books}
   s.description = %q{Use the LeanPub API to download data for a book, then store it in
   data files for access in your templates}
+  s.license       = 'MIT'
 
   s.files         = `git ls-files`.split("\n")
   s.test_files    = `git ls-files -- {test,spec,features}/*`.split("\n")
