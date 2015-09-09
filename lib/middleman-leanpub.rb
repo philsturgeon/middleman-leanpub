@@ -2,7 +2,6 @@ require "middleman-core"
 require "json"
 require "net/http"
 require "uri"
-require "pry"
 
 class LeanpubExtension < ::Middleman::Extension
   option :api_key, nil, 'LeanPub API Key to get private data'
@@ -10,16 +9,8 @@ class LeanpubExtension < ::Middleman::Extension
 
   class HttpError < StandardError; end
 
-  module ClassMethods
-    def say_hello
-      puts "Hello"
-    end
-  end
-
   def initialize(app, options_hash={}, &block)
     super
-
-    app.send :include, ClassMethods
   end
 
   def after_configuration
@@ -44,10 +35,5 @@ class LeanpubExtension < ::Middleman::Extension
     puts "Shit did not go well with LeanPub"
   end
 end
-
-# Register extensions which can be activated
-# Make sure we have the version of Middleman we expect
-# Name param may be omited, it will default to underscored
-# version of class name
 
 ::Middleman::Extensions.register(:leanpub, LeanpubExtension)
