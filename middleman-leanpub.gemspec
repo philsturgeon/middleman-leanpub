@@ -6,8 +6,8 @@ Gem::Specification.new do |s|
   s.version     = "0.0.1"
   s.platform    = Gem::Platform::RUBY
   s.authors     = ["Phil Sturgeon"]
-  # s.email       = ["email@example.com"]
-  # s.homepage    = "http://example.com"
+  s.email       = ["me@philsturgeon.uk"]
+  s.homepage    = "https://github.com/philsturgeon/middleman-leanpub"
   s.summary     = %q{Grab data for LeanPub Books}
   s.description = %q{Use the LeanPub API to download data for a book, then store it in
   data files for access in your templates}
@@ -19,7 +19,7 @@ Gem::Specification.new do |s|
   s.require_paths = ["lib"]
   
   # The version of middleman-core your extension depends on
-  s.add_runtime_dependency("middleman-core", [">= 3.3.10"])
+  s.add_runtime_dependency 'middleman-core', '~> 3.3', '>= 3.3.10'
   
   # Additional dependencies
   # s.add_runtime_dependency("gem-name", "gem-version")
